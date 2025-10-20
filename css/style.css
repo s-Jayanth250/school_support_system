@@ -1,0 +1,68 @@
+/* css/style.css - matte, calm color scheme */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',sans-serif;background:#F7F9FB;color:#333;line-height:1.45}
+
+/* Navbar */
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:12px 22px;background:#4FA3A5;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.nav-left{display:flex;align-items:center}
+.profile-icon{width:36px;height:36px;border-radius:50%;margin-right:10px;border:2px solid #F7F9FB}
+.brand{font-weight:600}
+.nav-links{display:flex;gap:14px;align-items:center}
+.nav-links a{color:#fff;text-decoration:none;padding:6px 10px;border-radius:8px}
+.nav-links a:hover{background:rgba(255,255,255,0.08);color:#FFD966}
+
+/* hero */
+.hero{padding:80px 20px;text-align:center;background:linear-gradient(135deg,#4FA3A5 0%, #3B8686 60%);color:#fff}
+.hero .lead{max-width:760px;margin:14px auto 20px;font-size:1.05rem}
+.cta-btn{background:#FFD966;color:#003366;padding:10px 18px;border-radius:30px;text-decoration:none;font-weight:700}
+.hero{
+  background: linear-gradient(
+      rgba(79, 163, 165, 0.85),
+      rgba(79, 163, 165, 0.85)
+    ),
+    url("https://images.unsplash.com/photo-1588072432836-e10032774350")
+      center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  border-bottom: 5px solid #ffd966;
+
+}
+/* sections */
+.home-section{padding:34px 20px}
+.info{display:flex;justify-content:center;gap:18px;padding:28px 20px}
+.info-card{background:#fff;padding:20px;border-radius:12px;min-width:220px;box-shadow:0 6px 18px rgba(0,0,0,0.06);text-align:center}
+
+/* posts */
+.posts-container{display:flex;flex-wrap:wrap;gap:18px;margin-top:14px}
+.post-card{background:#fff;padding:14px;border-radius:12px;min-width:240px;box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+.post-card h3{color:#3B8686;margin-bottom:8px}
+.post-card p{color:#555;margin-bottom:10px}
+.post-card .meta{font-size:0.85rem;color:#777}
+
+/* auth */
+.auth-wrap{display:flex;align-items:center;justify-content:center;height:100vh}
+.auth-card{width:360px;background:#fff;padding:28px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.08);text-align:center}
+.auth-card h2{color:#3B8686;margin-bottom:10px}
+.user-type{display:flex;gap:10px;justify-content:center;margin-bottom:12px}
+.user-type label{font-weight:600;color:#495c83}
+
+/* forms */
+input[type="text"],input[type="email"],input[type="password"],textarea,input[type="number"]{
+  width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #e2e6ea;outline:none
+}
+button, .btn{background:#4FA3A5;color:white;border:none;padding:10px 12px;border-radius:8px;cursor:pointer}
+button:hover, .btn:hover{background:#3B8686}
+
+/* simple cards */
+.card{background:#fff;padding:16px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.06);margin-bottom:14px}
+
+/* small utilities */
+.welcome{color:#fff;font-weight:600}
+.site-footer{padding:18px;text-align:center;background:#fff;margin-top:20px;border-top:1px solid #e8eef0;color:#777}
+
+/* responsive */
+@media(max-width:800px){
+  .info{flex-direction:column;align-items:center}
+  .nav-links{display:none}
+}

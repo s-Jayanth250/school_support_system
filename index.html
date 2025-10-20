@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SchoolConnect - Home</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<style>
+    .site-footer {
+      background-color: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      font-family: 'Poppins', sans-serif;
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+    .site-footer p {
+      margin: 10px 0;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .social-links {
+      margin-bottom: 10px;
+    }
+
+    .social-links a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 20px;
+      transition: color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      color: #4CAF50; /* Accent color on hover */
+    }
+
+    @media (max-width: 600px) {
+      .social-links a {
+        margin: 0 6px;
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="profile" class="profile-icon">
+      <span class="brand">SchoolConnect</span>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" >Home</a>
+      <a href="#about">About</a>
+      <a href="#opportunities">Opportunities</a>
+      <a href="#contact">Contact</a>
+      <a href="auth.html" class="login-link">Login / Register</a>
+    </nav>
+    <div class="hamburger" id="hamburger"></div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <h1>Connecting Schools with Volunteers</h1>
+      <p class="lead">Empowering local education through community collaboration.</p>
+      <a href="auth.html" class="cta-btn">Get Started</a>
+    </section>
+
+    <section class="info">
+      <div class="info-card">
+        <h3>For Schools</h3>
+        <p>Register, post needs, and review volunteer applications.</p>
+      </div>
+      <div class="info-card">
+        <h3>For Volunteers</h3>
+        <p>Find suitable opportunities and apply directly from your dashboard.</p>
+      </div>
+    </section>
+
+    <section id="opportunities" class="home-section recent-posts">
+      <h2>Recent Volunteer Opportunities</h2>
+      <div class="posts-container" id="postsContainer">Loading...</div>
+    </section>
+
+    <section id="about" class="home-section">
+      <h2>About</h2>
+      <p> <b> SchoolConnect </b>brings schools and volunteers together to support learning and school operations.</p>
+      <p>We believe every school deserves the right support to thrive. This platform connects local schools with dedicated volunteers and freelancers willing to share their time, talent, and expertise. Schools can post opportunities ranging from academic assistance to event coordination and technical support. Volunteers can find meaningful roles that match their interests while making a real impact in their community. Through collaboration, we aim to strengthen education and foster a culture of service and learning.</p>
+    </section>
+
+    <section id="contact" class="home-section">
+      <h2>Contact</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Your name" required>
+        <input type="email" placeholder="Your email" required>
+        <textarea placeholder="Message" rows="4" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="social-links">
+      <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://x.com/" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://in.linkedin.com/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.youtube.com/" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>&copy; 2025 SchoolConnect. All Rights Reserved.</p>
+  </footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
