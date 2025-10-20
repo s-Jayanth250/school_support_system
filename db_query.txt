@@ -1,0 +1,49 @@
+-- Full DB setup (run once)
+CREATE DATABASE IF NOT EXISTS school_volunteer_db;
+USE school_volunteer_db;
+
+CREATE TABLE IF NOT EXISTS schools (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(150) NOT NULL,
+  email VARCHAR(150) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  address VARCHAR(255),
+  contact VARCHAR(50),
+  description TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS volunteers (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(150) NOT NULL,
+  email VARCHAR(150) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  skills VARCHAR(255),
+  availability VARCHAR(100),
+  contact VARCHAR(50),
+  location VARCHAR(150),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS opportunities (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  school_id INT NOT NULL,
+  title VARCHAR(200) NOT NULL,
+  description TEXT,
+  category VARCHAR(100),
+  location VARCHAR(150),
+  num_volunteers INT DEFAULT 1,
+  date_posted TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (school_id) REFERENCES schools(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS applications (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  opportunity_id INT NOT NULL,
+  volunteer_id INT NOT NULL,
+  message TEXT,
+  status ENUM('pending','accepted','rejected') DEFAULT 'pending',
+  applied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (opportunity_id) REFERENCES opportunities(id) ON DELETE CASCADE,
+  FOREIGN KEY (volunteer_id) REFERENCES volunteers(id) ON DELETE CASCADE
+);
